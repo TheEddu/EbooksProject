@@ -1,0 +1,243 @@
+@import url('reset.css');
+@import url('global.css');
+
+body {
+  background-color: var(--primary-color);
+}
+
+body::before {
+  content: "";
+  background-image: url('https://image.lexica.art/full_webp/093b00db-7018-448f-a595-da8e73b59f84');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.s-menu {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.s-menu__item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 1.25rem;
+}
+
+.s-menu__icon {
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+}
+
+.s-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 3000px;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.s-card {
+  border: 0.5rem solid white;
+  width: 320px;
+  height: 480px;
+  position: absolute;
+  transition: filter .5s ease-in-out;
+  background: rgba(0,0,0,0.05);
+}
+
+/* Distribuição dos 5 cards em círculo 3D */
+.s-card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(50vw);
+}
+.s-card:nth-child(2) {
+  transform: rotateY(72deg) translateZ(50vw);
+}
+.s-card:nth-child(3) {
+  transform: rotateY(144deg) translateZ(50vw);
+}
+.s-card:nth-child(4) {
+  transform: rotateY(216deg) translateZ(50vw);
+}
+.s-card:nth-child(5) {
+  transform: rotateY(288deg) translateZ(50vw);
+}
+
+
+.s-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.s-card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: bottom 1s ease-in-out;
+}
+
+.s-controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  position: static;
+}
+
+.s-controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 0.75rem;
+}
+
+.s-controller__button:hover {
+  transform: scale(1.1);
+}
+
+.s-controller__button--active {
+  background-color: white;
+  color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  outline: 0.125rem solid white;
+}
+
+.s-controller__line {
+  background-color: white;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+}
+
+/* Hover Animation */
+
+.s-card--hovered .s-card__background {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.s-card--hovered .s-card__image {
+  transform: scale(1.4);
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+}
+
+.s-card--hovered .s-card__title {
+  bottom: 50%;
+}
+
+.carousel-section {
+  width: 100%;
+  padding: 3rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.s-cards-carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 70vh;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.library-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 0 2rem 2rem 2rem;
+  background: transparent;
+}
+
+.library-title {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.library-card {
+  background: rgba(255,255,255,0.07);
+  border: 3px solid white;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.library-card:hover {
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.18);
+  transform: translateY(-8px) scale(1.03);
+  border-color: var(--primary-color);
+}
+
+.library-card__image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.library-card__info {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.library-card__title {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.library-card__author {
+  color: #eee;
+  font-size: 1rem;
+}

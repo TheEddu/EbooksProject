@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- home-page-styles.css já importa reset/global -->
+  <link rel="stylesheet" href="./assets/css/home-page-styles.css">
+  <script src="./assets/scripts/script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <title>Ebooks</title>
+
+</head>
+<body>
+
+
+  <!-- SEÇÃO CARROSSEL -->
+  <section class="carousel-section">
+    <div class="s-container">
+      <div class="s-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);">
+        <a href="./pages/infoSec.html" class="s-card" id="infoSec">
+          <img class="s-card__image" src="./assets/images/capas/infoSec.jpg" alt="Segurança da Informação: O Grimório do Cyber Aventureiro">
+        </a>
+        <a href="./pages/kaizen.html" class="s-card" id="kaizen">
+          <img class="s-card__image" src="./assets/images/capas/kaizen.jpg" alt="Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital">
+        </a>
+        <a href="./pages/modoAnonimo.html" class="s-card" id="modoAnonimo">
+          <img class="s-card__image" src="./assets/images/capas/modoAnonimo.jpg" alt="Modo Anônimo: É Anônimo Mesmo?">
+        </a>
+        <a href="./pages/senhasSeguras.html" class="s-card" id="senhasSeguras">
+          <img class="s-card__image" src="./assets/images/capas/senhasSeguras.jpg" alt="Forjando Senhas Seguras">
+        </a>
+        <a href="./pages/CombatendoEssesInimigos.html" class="s-card" id="CombatendoEssesInimigos">
+          <img class="s-card__image" src="./assets/images/capas/CombatendoEssesInimigos.jpg" alt="Malware: Conhecendo e Combatendo Esses Inimigos">
+        </a>
+      </div>
+    </div>
+
+    <div class="s-controller">
+      <div id="1" onclick="selectCarouselItem(this)" class="s-controller__button s-controller__button--active text-indigo-600">
+        01
+      </div>
+      <div id="2" onclick="selectCarouselItem(this)" class="s-controller__button text-indigo-600">
+        02
+      </div>
+      <div id="3" onclick="selectCarouselItem(this)" class="s-controller__button text-indigo-600">
+        03
+      </div>
+      <div id="4" onclick="selectCarouselItem(this)" class="s-controller__button text-indigo-600">
+        04
+      </div>
+      <div id="5" onclick="selectCarouselItem(this)" class="s-controller__button text-indigo-600">
+        05
+      </div>
+      <div class="s-controller__line"></div>
+    </div>
+  </section>
+
+</body>
+</html>
