@@ -1,6 +1,8 @@
 # Biblioteca Digital de Ebooks
 
-Este projeto é uma biblioteca digital de ebooks com foco em tecnologia, cibersegurança, produtividade e cultura digital. O site apresenta um carrossel interativo de livros e páginas dedicadas para cada ebook, com opções para leitura online e download.
+Este projeto é uma biblioteca digital de uma coleção de eBooks escritos por mime, com foco em tecnologia, cibersegurança, produtividade.  
+Me esforcei para trabalhar com linguagem acessível para profissionais, estudantes e leigos.  
+
 
 ## Funcionalidades
 
@@ -27,3 +29,13 @@ pages/                # Páginas HTML individuais dos ebooks
 index.html            # Página inicial com carrossel
 ```
 
+## Acesso alternativo
+
+Caso o PDF não carregue corretamente, você também pode acessar o conteúdo em formato de artigo no meu site pessoal:
+
+[**Acesse os artigos aqui**](https://theeddu.github.io/Cyber-Blog/)
+
+
+## Licença
+
+Este conteúdo é distribuído gratuitamente com fins educativos. É permitido compartilhar com atribuição, mas não modificar nem usar comercialmente.
