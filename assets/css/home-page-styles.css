@@ -3,6 +3,8 @@
 
 body {
   background-color: var(--primary-color);
+  position: relative;
+  min-height: 100vh;
 }
 
 body::before {
@@ -11,9 +13,11 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: -1;
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
@@ -162,7 +166,8 @@ body::before {
   background: transparent;
 }
 
-.s-cards-carousel {
+.s-cards-carousel,
+.s-cards-carousel-2 {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -173,6 +178,39 @@ body::before {
   transition: transform 0.4s ease-in;
   margin-bottom: 0;
   position: relative;
+  background: transparent !important;
+}
+
+/* Distribuição dos 5 cards em círculo 3D para ambos carrosseis */
+.s-cards-carousel .s-card:nth-child(1),
+.s-cards-carousel-2 .s-card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(50vw);
+}
+.s-cards-carousel .s-card:nth-child(2),
+.s-cards-carousel-2 .s-card:nth-child(2) {
+  transform: rotateY(72deg) translateZ(50vw);
+}
+.s-cards-carousel .s-card:nth-child(3),
+.s-cards-carousel-2 .s-card:nth-child(3) {
+  transform: rotateY(144deg) translateZ(50vw);
+}
+.s-cards-carousel .s-card:nth-child(4),
+.s-cards-carousel-2 .s-card:nth-child(4) {
+  transform: rotateY(216deg) translateZ(50vw);
+}
+.s-cards-carousel .s-card:nth-child(5),
+.s-cards-carousel-2 .s-card:nth-child(5) {
+  transform: rotateY(288deg) translateZ(50vw);
+}
+
+/* Remove qualquer fundo branco de cards/carrossel */
+.s-cards-carousel-2,
+.s-cards-carousel-2 .s-card {
+  background: transparent !important;
+}
+
+h1 {
+  margin-top: 0 !important;
 }
 
 .library-section {

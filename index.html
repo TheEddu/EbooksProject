@@ -5,12 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/home-page-styles.css">
-  <script src="./assets/scripts/script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <title>Ebooks</title>
+  <script src="./assets/scripts/header.js"></script>
+  <script src="./assets/scripts/footer.js"></script>
+  <script src="./assets/scripts/menu-mobile.js"></script>
+  <script src="./assets/scripts/carousel.js"></script>
 </head>
 <body>
+  <!-- Header será inserido via JS -->
+
+  <!-- TÍTULO ACIMA DO CARROSSEL PRINCIPAL -->
+  <h1 class="text-4xl font-bold text-center text-white mb-4 drop-shadow-lg pt-8" style="font-family: 'Share Tech Mono', monospace;">
+    Biblioteca Digital de Ebooks
+  </h1>
 
   <!-- SEÇÃO CARROSSEL -->
   <section class="carousel-section">
@@ -54,6 +62,40 @@
     </div>
   </section>
 
+  <!-- SEGUNDO CARROSSEL -->
+  <section class="carousel-section">
+    <h2 class="text-2xl font-semibold text-center text-white mb-4 drop-shadow" style="font-family: 'Share Tech Mono', monospace;">
+      Outros Destaques
+    </h2>
+    <div class="s-container">
+      <div class="s-cards-carousel s-cards-carousel-2" style="transform: translateZ(-40vw) rotateY(0deg);">
+        <a href="./pages/infoSec.html" class="s-card" id="infoSec2">
+          <img class="s-card__image" src="./assets/images/capas/infoSec.jpg" alt="Segurança da Informação: O Grimório do Cyber Aventureiro">
+        </a>
+        <a href="./pages/kaizen.html" class="s-card" id="kaizen2">
+          <img class="s-card__image" src="./assets/images/capas/kaizen.jpg" alt="Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital">
+        </a>
+        <a href="./pages/modoAnonimo.html" class="s-card" id="modoAnonimo2">
+          <img class="s-card__image" src="./assets/images/capas/modoAnonimo.jpg" alt="Modo Anônimo: É Anônimo Mesmo?">
+        </a>
+        <a href="./pages/senhasSeguras.html" class="s-card" id="senhasSeguras2">
+          <img class="s-card__image" src="./assets/images/capas/senhasSeguras.jpg" alt="Forjando Senhas Seguras">
+        </a>
+        <a href="./pages/CombatendoEssesInimigos.html" class="s-card" id="CombatendoEssesInimigos2">
+          <img class="s-card__image" src="./assets/images/capas/CombatendoEssesInimigos.jpg" alt="Malware: Conhecendo e Combatendo Esses Inimigos">
+        </a>
+      </div>
+    </div>
+    <div class="s-controller">
+      <div id="6" onclick="selectCarouselItem2(this)" class="s-controller__button s-controller__button--active text-indigo-600">06</div>
+      <div id="7" onclick="selectCarouselItem2(this)" class="s-controller__button text-indigo-600">07</div>
+      <div id="8" onclick="selectCarouselItem2(this)" class="s-controller__button text-indigo-600">08</div>
+      <div id="9" onclick="selectCarouselItem2(this)" class="s-controller__button text-indigo-600">09</div>
+      <div id="10" onclick="selectCarouselItem2(this)" class="s-controller__button text-indigo-600">10</div>
+      <div class="s-controller__line"></div>
+    </div>
+  </section>
 
+  <!-- Footer será inserido via JS -->
 </body>
 </html>

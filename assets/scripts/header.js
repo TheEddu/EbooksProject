@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/assets/partials/header.html")
+  fetch("../assets/partials/header.html")
     .then(response => response.text())
     .then(data => {
       const header = document.createElement("div");

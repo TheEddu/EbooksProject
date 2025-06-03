@@ -6,42 +6,12 @@
   <title>Kaizen | Biblioteca Digital</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src="../assets/scripts/header.js"></script>
+  <script src="../assets/scripts/footer.js"></script>
+  <script src="../assets/scripts/menu-mobile.js"></script>
 </head>
 <body class="bg-gray-50">
-  <header class="bg-gradient-to-r from-rose-700 via-red-600 to-pink-500 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-3">
-        <img src="../assets/images/logo.png" alt="Logo" class="w-10 h-10 drop-shadow-lg">
-        <span class="text-2xl font-bold text-white tracking-wide">Ebooks</span>
-      </a>
-      <nav class="hidden md:flex gap-8">
-        <a href="../index.html" class="text-white font-semibold hover:text-yellow-200 transition">Home</a>
-        <a href="#contato" class="text-white font-semibold hover:text-yellow-200 transition">Contato</a>
-      </nav>
-      <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-    <div class="md:hidden px-4 pb-4 hidden" id="mobile-menu">
-      <nav class="flex flex-col gap-2">
-        <a href="../index.html" class="text-white font-semibold hover:text-yellow-200 transition">Home</a>
-        <a href="#contato" class="text-white font-semibold hover:text-yellow-200 transition">Contato</a>
-      </nav>
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const btn = document.getElementById('menu-toggle');
-        const menu = document.getElementById('mobile-menu');
-        if (btn && menu) {
-          btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-          });
-        }
-      });
-    </script>
-  </header>
+  <!-- Header será inserido via JS -->
 
   <main class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row gap-8">
     <div class="flex-shrink-0">
@@ -73,43 +43,9 @@
     </div>
   </main>
 
-  <section class="max-w-6xl mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4 text-gray-800">Outras Produções</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <a href="https://theeddu.github.io/PortfolioLabs/" target="_blank" class="bg-white rounded-lg shadow-md p-4 hover:bg-gray-100 transition text-center font-semibold text-blue-700">
-        <img src="https://image.lexica.art/full_webp/6957307a-3542-4118-ae89-54a02851ef3d" alt="PortfolioLabs">
-        PortfolioLabs
-      </a>
-      <a href="https://theeddu.github.io/PersonalPortfolioPage/" target="_blank" class="bg-white rounded-lg shadow-md p-4 hover:bg-gray-100 transition text-center font-semibold text-blue-700">
-        <img src="../assets/images/logo.png" alt="PersonalPortfolioPage">
-        PersonalPortfolioPage
-      </a>
-      <a href="https://theeddu.github.io/Cyber-Blog/" target="_blank" class="bg-white rounded-lg shadow-md p-4 hover:bg-gray-100 transition text-center font-semibold text-blue-700">
-        <img src="https://image.lexica.art/full_webp/03eb65a7-7433-406a-8934-7d8be781271e" alt="Cyber-Blog">
-        Cyber-Blog
-      </a>
-      <a href="https://theeddu.github.io/UpgradingMind/" target="_blank" class="bg-white rounded-lg shadow-md p-4 hover:bg-gray-100 transition text-center font-semibold text-blue-700">
-        <img src="https://image.lexica.art/full_webp/56b19b28-e169-4d0c-a8d5-317cd95167ed" alt="UpgradingMind">
-        UpgradingMind
-      </a>
-    </div>
-  </section>
+  <section id="outras-producoes" class="max-w-6xl mx-auto p-6"></section>
 
-  <footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-200 mt-10">
-    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8">
-        <span class="font-bold text-lg">Ebooks</span>
-      </div>
-      <div class="flex gap-6" id="contato">
-        <a class="text-blue-700" target="_blank" href="https://github.com/TheEddu">GitHub</a>
-        <a class="text-blue-700" target="_blank" href="https://www.linkedin.com/in/eduardo-s-b39896205/">Linkedin</a>
-        <a class="text-blue-700" target="_blank" href="https://tryhackme.com/p/TheEddu">TryHackMe</a>
-      </div>
-      <div class="text-sm text-gray-400 mt-2 md:mt-0">
-        &copy; 2025 Ebooks.
-      </div>
-    </div>
-  </footer>
+  <!-- Footer será inserido via JS -->
+  <script src="../assets/scripts/outras-producoes.js"></script>
 </body>
 </html>
