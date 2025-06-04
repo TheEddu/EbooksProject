@@ -2,23 +2,21 @@
 @import url('global.css');
 
 body {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, #6999ff 0%, #9ad2ec 100%);
   position: relative;
   min-height: 100vh;
 }
 
 body::before {
   content: "";
-  background-image: url('https://image.lexica.art/full_webp/093b00db-7018-448f-a595-da8e73b59f84');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(135deg, #6999ff 0%, #9ad2ec 100%);
   background-size: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0; left: 0;
   z-index: -1;
-  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  transition: background 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .s-menu {
