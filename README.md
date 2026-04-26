@@ -29,13 +29,6 @@ pages/                # Páginas HTML individuais dos ebooks
 index.html            # Página inicial com carrossel
 ```
 
-## Acesso alternativo
-
-Caso o PDF não carregue corretamente, você também pode acessar o conteúdo em formato de artigo no meu site pessoal:
-
-[**Acesse os artigos aqui**](https://theeddu.github.io/Cyber-Blog/)
-
-
 ## Licença
 
 Este conteúdo é distribuído gratuitamente com fins educativos. É permitido compartilhar com atribuição, mas não modificar nem usar comercialmente.
